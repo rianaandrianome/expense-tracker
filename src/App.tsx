@@ -5,22 +5,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './assets/scss/main.scss';
 
-import { Header, Footer, Dashboard } from './components/index';
+import {
+  Header, Footer, Dashboard, Expense,
+} from './components/index';
 
 const App = () => (
   <div className="App">
-    <Header />
-
-    <div className="main">
-      <Router>
+    <Router>
+      <Header />
+      <div className="main">
         <Switch>
           {/* use exact path for "/" otherwise it will match every path containing "/" */}
           <Route exact path="/" component={Dashboard} />
-        </Switch>
-      </Router>
-    </div>
+          <Route path="/add-expense" component={Expense} />
 
-    <Footer />
+        </Switch>
+      </div>
+
+      <Footer />
+    </Router>
   </div>
 );
 

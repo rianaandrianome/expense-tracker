@@ -2,11 +2,11 @@ body, .h1, .h2, .h3, .h4, .h5, .h6, .navbar, a, button, h1, h2, h3, h4, h5, h6, 
   font-family: "Montserrat","Helvetica",Arial,sans-serif;
 }
 
-a, button, input, p, select, td, textarea {
-  font-size: 15px;
+a, button, input, p, select, td, textarea, .btn {
+  font-size: 14px;
 }
 
 h1 {
-  text-align: center;
   text-transform: uppercase;
+  font-size: 28px;
 }

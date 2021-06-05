@@ -3,5 +3,10 @@
 @import "./common/mixins";
 @import "./common/global";
 
-@import "./navbar";
+@import "./header";
 @import "./footer";
+
+@import "./pages/dashboard";
+@import "./pages/expense";
+
+@import "./components/charts";

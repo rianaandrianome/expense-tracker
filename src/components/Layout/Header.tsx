@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
 import {
   Navbar, Nav, Container, Modal, Button,
 } from 'react-bootstrap';
@@ -12,7 +13,7 @@ const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           Expense Tracker
         </Navbar.Brand>
 
@@ -21,9 +22,9 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav>
-            {/* <Nav.Link href="/">
-              User guide
-            </Nav.Link> */}
+            <Nav.Link as={Link} to="/add-expense">
+              Add Expense
+            </Nav.Link>
 
             <Button variant="secondary" onClick={handleShow}>
               User Guide

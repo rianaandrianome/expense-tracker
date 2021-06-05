@@ -49,5 +49,6 @@ module.exports = {
     'no-console': 0,
     '@typescript-eslint/no-unused-vars': 0,
     'react/no-unescaped-entities': 0,
+    '@typescript-eslint/no-explicit-any': 0,
   },
 };
