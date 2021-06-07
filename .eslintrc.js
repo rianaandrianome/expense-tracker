@@ -50,5 +50,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 0,
     'react/no-unescaped-entities': 0,
     '@typescript-eslint/no-explicit-any': 0,
+    'padded-blocks': 0,
   },
 };

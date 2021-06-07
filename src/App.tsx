@@ -22,6 +22,12 @@ const App = () => (
         </Switch>
       </div>
 
+      <div className="scrollTop">
+        <button type="button" className="btn" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          ^
+        </button>
+      </div>
+
       <Footer />
     </Router>
   </div>

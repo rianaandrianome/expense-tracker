@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
-  Navbar, Nav, Container, Modal, Button,
+  Navbar, Nav, Container, Button, Modal,
 } from 'react-bootstrap';
 
 const Header = () => {
@@ -22,25 +22,41 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav>
-            <Nav.Link as={Link} to="/add-expense">
-              Add Expense
-            </Nav.Link>
-
-            <Button variant="secondary" onClick={handleShow}>
+            <Button variant="secondary" onClick={handleShow} className="nav-link">
               User Guide
             </Button>
 
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>How to use the tracker?</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Woohoo, you&apos;re reading this text in a modal!</Modal.Body>
+              <Modal.Body>
+                <p className="font-weight-bold text-uppercase">
+                  Add an expense
+                </p>
+                <p>Click on the Add Expense button to add data.</p>
+
+                <p className="font-weight-bold text-uppercase">
+                  Viewing
+                </p>
+                <ul>
+                  <li>
+                    The 2 graphs give a vizualization of how much money was spent on the different categories.
+                  </li>
+                  <li>
+                    The table below the 2 graphs give a detailed list of the expenditures.
+                  </li>
+                </ul>
+
+                <p className="font-weight-bold text-uppercase">
+                  Filtering
+                </p>
+                <p>Choose one of the period to filter your data.</p>
+
+              </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
                   Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                  Save Changes
                 </Button>
               </Modal.Footer>
             </Modal>
